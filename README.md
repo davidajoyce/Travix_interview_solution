@@ -1,5 +1,17 @@
 **Travix - Problem to be solved**
 
+
+**Comments on Solution:**
+
+There are some parts of the solution I would have liked to have implmented but due to the time constraints I shall list here:
+- Created Enums for the supplier names to avoid comparing with a string to remove human error in future modification of the code
+- Implement more error handling and creating specific errors for missing request details
+- Create more test cases especially for the unit test case level to improve the test coverage
+- implement the validation for the ISO date format and throwing the specific exception for this case
+- implement serializers, deserializers and objectMappers to make it easier to handle the objects instead of just handling strings e.g easier to handle the dates and confirm ISO format
+
+**To Run:**
+- clone the project and run the test classes.
 **Background:**
 
 BusyFlights is a flights search solution which aggregates flight results initially from 2 different suppliers (CrazyAir and ToughJet). A future iteration (not part of the test) may add more suppliers.
@@ -99,3 +111,4 @@ It is fine to change any of the supplied application code, if you choose to do s
 **Note**
 
 Please clone this project then create your own repository from it. Do not fork/branch this project when creating your solution as it will be visible to other applicants.
+
