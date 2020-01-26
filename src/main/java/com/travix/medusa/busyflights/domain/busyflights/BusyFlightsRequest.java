@@ -47,4 +47,8 @@ public class BusyFlightsRequest {
     public void setNumberOfPassengers(final int numberOfPassengers) {
         this.numberOfPassengers = numberOfPassengers;
     }
+
+    public boolean isValid() {
+        return true;
+    }
 }

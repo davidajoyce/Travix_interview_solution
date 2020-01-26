@@ -2,12 +2,14 @@ package com.travix.medusa.busyflights.suppliers;
 
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetRequest;
 import com.travix.medusa.busyflights.domain.toughjet.ToughJetResponse;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
 
+@Component
 public class FakeToughJetData {
     public List<ToughJetResponse> findFlights(ToughJetRequest request) {
         ToughJetResponse firstFlight = new ToughJetResponse();
