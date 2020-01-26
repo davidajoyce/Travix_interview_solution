@@ -15,8 +15,8 @@ public class BusyFlightsResponse {
         return true;
     }
 
-    public Integer getFare() {
-        return Integer.valueOf(0);
+    public double getFare() {
+        return fare;
     }
 
     public void setSupplier(String supplier) {

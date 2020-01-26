@@ -2,6 +2,8 @@ package com.travix.medusa.busyflights.controller;
 
 import com.travix.medusa.busyflights.domain.busyflights.BusyFlightsRequest;
 import com.travix.medusa.busyflights.domain.busyflights.BusyFlightsResponse;
+import com.travix.medusa.busyflights.domain.toughjet.ToughJetRequest;
+import com.travix.medusa.busyflights.domain.toughjet.ToughJetResponse;
 import com.travix.medusa.busyflights.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,9 +25,15 @@ public class BusyFlightsController {
         this.flightService = flightService;
     }
 
-    @RequestMapping(value = "/search", method = RequestMethod.POST, consumes =  APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE )
-    public List<BusyFlightsResponse> getFlights(@RequestBody BusyFlightsRequest request){
+    @RequestMapping(value = "/getBusyFlightDetails" )
+    public List<BusyFlightsResponse> getBusyFlights(@RequestBody BusyFlightsRequest request){
             List<BusyFlightsResponse> response = flightService.searchFlights(request);
             return response;
+    }
+
+    @RequestMapping(value = "/getToughJetDetails" )
+    public List<ToughJetResponse> getToughFlights(@RequestBody ToughJetRequest request){
+        List<ToughJetResponse> response = flightService.searchFlights(request);
+        return response;
     }
 }

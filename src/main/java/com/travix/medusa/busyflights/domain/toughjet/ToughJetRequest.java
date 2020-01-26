@@ -1,5 +1,7 @@
 package com.travix.medusa.busyflights.domain.toughjet;
 
+import com.travix.medusa.busyflights.domain.busyflights.BusyFlightsRequest;
+
 public class ToughJetRequest {
 
     private String from;
@@ -46,5 +48,9 @@ public class ToughJetRequest {
 
     public void setNumberOfAdults(final int numberOfAdults) {
         this.numberOfAdults = numberOfAdults;
+    }
+
+    public boolean isValid() {
+        return true;
     }
 }
